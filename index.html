@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=yes" />
+    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <title>Document</title>
+    <style>
+        a:nth-child(2) {
+            margin-bottom: 20px;
+        }
+        .control.has-icons-left .icon{
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <a href="tel:18301692861" class="button  is-link ">打电话</a> &nbsp;&nbsp;&nbsp;
+        <a href="sms:18301692861" class="button  is-info">发短信</a>
+        <div class="field">
+            <p class="control has-icons-left">
+                <input class="input" type="password" placeholder="Password">
+                <span class="icon has-text-primary">
+                    <i class="fa fa-search"></i>
+                </span>
+            </p>
+        </div>
+    </div>
+    <div class="content">
+        <p>
+            An invitation to
+            <span class="icon-text">
+                <span class="icon">
+                    <i class="fa fa-music"></i>
+                </span>
+                <span>dinner</span>
+            </span>
+            was soon afterwards dispatched; and already had Mrs. Bennet planned the courses that were to do credit to
+            her housekeeping, when an answer arrived which deferred it all. Mr. Bingley was obliged to be in
+            <span class="icon-text">
+                <span class="icon">
+                    <i class="fa fa-heart"></i>
+                </span>
+                <span>town</span>
+            </span>
+            the following day, and, consequently, unable to accept the honour of their
+            <span class="icon-text">
+                <span class="icon">
+                    <i class="fa fa-envelope-o"></i>
+                </span>
+                <span>invitation</span>
+            </span>,
+            etc.
+        </p>
+
+        <p>
+            Mrs. Bennet was quite disconcerted. She could not imagine what business he could have in town so soon after
+            his
+            <span class="icon-text">
+                <span class="icon">
+                    <i class="fa fa-flag-checkered"></i>
+                </span>
+                <span>arrival</span>
+            </span>
+            in Hertfordshire; and she began to fear that he might be always
+            <span class="icon-text">
+                <span class="icon">
+                    <i class="fa fa-film"></i>
+                </span>
+                <span>flying</span>
+            </span>
+            about from one place to another, and never settled at Netherfield as he ought to be.
+        </p>
+    </div>
+    <div class="open-camera">
+         <!--图片二-->
+         <label for="xFile2" style="padding-top:15px;" class=" cameraImg2" onclick="removeImg2();">
+            <span v-if="imgList2.length == ''" class="glyphicon-camera" >
+              <p style="line-height:5px;">
+               <label>图片二</label>
+              <!--调取相机-->
+               <input type="file" id="xFile2" capture="camera" multiple="multiple" accept="image/*" class="imgInp1" onchange='onUpload2($event)'  style="position:absolute;clip:rect(0 0 0 0); width: 100%; height: 105px; top:0px;" v-if="judgeFan">
+             </p>
+           </span>
+          </label>
+    </div>
+    <script>
+        let xFile2 = document.getElementById('xFile2');
+        console.log(xFile2);
+        function removeImg2(){
+            console.log(1111)
+        }
+        function onUpload2(e){
+            console.log(e)
+        }
+    </script>
+</body>
+
+</html>
